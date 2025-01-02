@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  ats-scanner:
+    build: .
+    ports:
+      - "9900:9900"
+    volumes:
+      - .:/app
+    restart: always
