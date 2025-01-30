@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
 
-EXPOSE 9900
+EXPOSE 80
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9900"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
