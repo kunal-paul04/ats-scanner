@@ -4,7 +4,14 @@ from app.utils import parse_cv, match_skills
 import os
 import shutil
 
+
 app = FastAPI()
+
+
+@app.post("/")
+def index():
+    return 'Welcome to ATS Scanner with FastAPI. A simple ATS scanner built with FastAPI to parse resumes/CVs and extract key information such as name, email, phone, and skills.'
+
 
 @app.post("/upload_and_match", response_model=JobMatchResult)
 async def upload_and_match(
